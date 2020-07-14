@@ -1,3 +1,4 @@
+/* eslint-disable no-console */
 import $ from 'jquery';
 
 import store from './store';
@@ -52,19 +53,10 @@ const handleNewItemSubmit = function () {
     const newItemName = $('.js-shopping-list-entry').val();
     $('.js-shopping-list-entry').val('');
     api.createItem(newItemName)
-      .then(res => {
-        if (res.ok) {
-          res.json();
-        }
-        throw new Error(res.statusText);
-      })
+      .then(res => res.json())
       .then((newItem) => {
-        console.log(newItem);
         store.addItem(newItem);
         render();
-      })
-      .catch(err => {
-        console.log(err.message);
       });
   });
 };
