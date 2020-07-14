@@ -2,7 +2,7 @@ import $ from 'jquery';
 
 import store from './store';
 import api from './api';
-import item from './item';
+
 const generateItemElement = function (item) {
   let itemTitle = `<span class="shopping-item shopping-item__checked">${item.name}</span>`;
   if (!item.checked) {
@@ -52,9 +52,20 @@ const handleNewItemSubmit = function () {
     const newItemName = $('.js-shopping-list-entry').val();
     $('.js-shopping-list-entry').val('');
     api.createItem(newItemName)
-    .then(res => res.json())
-    .then(item => { store.addItem(item);
-    render();})
+      .then(res => {
+        if (res.ok) {
+          res.json();
+        }
+        throw new Error(res.statusText);
+      })
+      .then((newItem) => {
+        console.log(newItem);
+        store.addItem(newItem);
+        render();
+      })
+      .catch(err => {
+        console.log(err.message);
+      });
   });
 };
 
