@@ -4,6 +4,7 @@ import $ from 'jquery';
 import store from './store';
 import api from './api';
 
+
 const generateItemElement = function (item) {
   let itemTitle = `<span class="shopping-item shopping-item__checked">${item.name}</span>`;
   if (!item.checked) {
@@ -73,9 +74,11 @@ const handleDeleteItemClicked = function () {
     // get the index of the item in store.items
     const id = getItemIdFromElement(event.currentTarget);
     // delete the item
-    store.findAndDelete(id);
-    // render the updated shopping list
-    render();
+    api.deleteItem(id)
+      .then(()=>{
+        store.findAndDelete(id);
+        render();
+      });
   });
 };
 
