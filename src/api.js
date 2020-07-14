@@ -1,21 +1,24 @@
 const BASE_URL = 'https://thinkful-list-api.herokuapp.com/kaythew';
 
 function getItems() {
-  return fetch(`${BASE_URL}/items`);
-
+  return fetch(`${BASE_URL}/items`)
+    .catch(err => {
+      new Error(err.message);
+    });
 }
 
 function createItem(name) {
-  const newItem = JSON.stringify({
-    name
-  });
+  const newItem = JSON.stringify({name});
   return fetch(`${BASE_URL}/items`, {
     method: 'POST',
     headers: {
       'Content-Type': 'application/json'
     },
     body: newItem
-  });
+  })
+    .catch(err => {
+      new Error(err.message);
+    });
 }
 
 function updateItem(id, updateData) {
@@ -26,13 +29,19 @@ function updateItem(id, updateData) {
       'Content-Type': 'application/json',
     },
     body: newItem,
-  });
+  })
+    .catch(err => {
+      new Error(err.message);
+    });
 }
 
 function deleteItem(id) {
   return fetch(`${BASE_URL}/items/${id}`, {
     method: 'DELETE',
-  });
+  })
+    .catch(err => {
+      new Error(err.message);
+    });
 }
 
 export default {
