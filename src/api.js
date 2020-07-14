@@ -1,13 +1,18 @@
 
 const BASE_URL = 'https://thinkful-list-api.herokuapp.com/kaythew';
+
 function getItems(){
   return fetch(`${BASE_URL}/items`);
     
 }
 
 function createItem(name) {
-  let newItem = {'name' : name};
-  newItem.json.stringify();
+  const newItem = JSON.stringify({name});
+  return fetch(`${BASE_URL}/items`, {
+    method : 'POST',
+    headers : {'Content-Type' : 'application/json'},
+    body : newItem
+  });
 }
 
 export default {
