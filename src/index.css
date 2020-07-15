@@ -94,12 +94,12 @@ button:hover {
 #cancel-error {
   margin-right: 0.5rem;
 } 
-@media all and (min-width: 700px) {
+@media all and (min-width: 985px) {
   .container {
     max-width: 600px;
   }
   body {
-    margin-top: 5px;
+    margin-top: 2%;
     font-size : 25px;
   }
   h1 {
