@@ -8,6 +8,7 @@ import shoppingList from './shopping-list';
 import store from './store';
 
 const main = function () {
+  document.body.style.backgroundImage = 'url("images/food.jpg")';
   api.getItems()
     .then((items) => {
       items.forEach((item) => store.addItem(item));

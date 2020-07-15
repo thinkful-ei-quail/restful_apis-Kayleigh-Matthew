@@ -1,11 +1,23 @@
 * {
   box-sizing: border-box;
 }
+h1 {
+  font-size: 100px;
+  font-family: 'Galada', cursive;
+  color: rgb(15, 5, 5);
+}
 
+section {
+  background-color: rgba(251, 251, 251, 0.8);
+  border: 5px solid rgb(7, 5, 5);
+}
 body {
   font-family: 'Roboto', sans-serif;
   width: 85%;
   margin: 0 auto;
+  font-weight: bolder;
+  
+  
 }
 
 button, input[type="text"] {
@@ -27,22 +39,24 @@ button:hover {
 .container {
   max-width: 600px;
   margin: 0 auto;
+  
 }
 
 .shopping-list {
   list-style: none;
   padding-left: 0;
+  
 }
 
 .shopping-list > li {
-  margin-bottom: 20px;
-  border: 1px solid grey;
-  padding: 20px;
+  margin-bottom: 25px;
+  
+  padding: 25px;
 }
 
 .shopping-item {
   display: block;
-  color: grey;
+  color: rgb(3, 3, 3);
   font-size: 20px;
   margin-bottom: 15px;
 }
