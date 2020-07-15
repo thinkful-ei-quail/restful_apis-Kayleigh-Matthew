@@ -121,9 +121,9 @@ const handleEditShoppingItemSubmit = function () {
     const id = getItemIdFromElement(event.currentTarget);
     const itemName = $(event.currentTarget).find('.shopping-item').val();
 
-    api.updateItem(id, itemName)
+    api.updateItem(id, {name : itemName})
       .then(() => {
-        store.findAndUpdate(id, itemName);
+        store.findAndUpdate(id, {name : itemName});
         render();
       })
       .catch((error) => {
@@ -140,7 +140,7 @@ const handleItemCheckClicked = function () {
     const item = store.findById(id);
     api.updateItem(id, {checked : !item.checked})
       .then(() => {
-        store.findAndUpdate(id, !item.checked);
+        store.findAndUpdate(id, {checked : !item.checked});
         render();
       })
       .catch((error) => {

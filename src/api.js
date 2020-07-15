@@ -12,7 +12,6 @@ const listApiFetch = function (...args) {
           return Promise.reject(error);
         }
       }
-  
       return res.json();
     })
     .then(data => {

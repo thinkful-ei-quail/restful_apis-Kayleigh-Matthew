@@ -4,8 +4,8 @@ import 'normalize.css';
 import './index.css';
 
 import api from './api';
-import shoppingList from './shopping-list';
 import store from './store';
+import shoppingList from './shopping-list';
 
 const main = function () {
   document.body.style.backgroundImage = 'url("images/food.jpg")';

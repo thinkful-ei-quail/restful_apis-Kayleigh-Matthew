@@ -13,7 +13,7 @@ const addItem = function (item) {
 };
 
 const findAndUpdate = function (id, newData) {
-  let item = this.items.find(item => item.id === id);
+  const item = this.findById(id);
   Object.assign(item, newData);
 };
 
