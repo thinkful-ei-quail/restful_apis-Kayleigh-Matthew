@@ -1,10 +1,9 @@
 {
-  "name": "restful_apis-Kayleigh-Matthew",
+  "name": "shopping-list-starter",
   "version": "1.0.0",
-  "description": "Restful API Project",
+  "description": "Created for the Thinkful EI Program.",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
     "start": "webpack-dev-server",
     "build": "webpack --mode production"
   },
