@@ -19,7 +19,8 @@
   },
   "homepage": "https://github.com/thinkful-ei-quail/restful_apis-Kayleigh-Matthew#readme",
   "dependencies": {
-    "jquery": "^3.5.1"
+    "jquery": "^3.5.1",
+    "normalize.css": "^8.0.1"
   },
   "devDependencies": {
     "css-loader": "^3.6.0",

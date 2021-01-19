@@ -1,9 +1,7 @@
-<<<<<<< HEAD
-Restful API Project
-=======
-## Shopping List Starter
+## Shopping List
+instructions:
+npm install
+npm start
+on web browser, go to http://localhost:8080/
 
-#### Created for the Thinkful EI Program.
 
-Please reference the startup instructions within your curriculum.
->>>>>>> with-api-webpack

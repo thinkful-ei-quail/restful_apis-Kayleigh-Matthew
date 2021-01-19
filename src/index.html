@@ -7,28 +7,31 @@
   <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
   <style>
     @import url('https://fonts.googleapis.com/css2?family=Galada&display=swap');
-    </style>
+  </style>
 </head>
 
 <body>
   <div class="container">
     <section>
-    <h1>Shopping List</h1>
+      <h1>Shopping List</h1>
+
       <form id="js-shopping-list-form">
         <div class="error-container">Error!</div>
-        <label  class= 'startingText' for="shopping-list-entry">What do you need?</label>
-        <input type="text" name="shopping-list-entry" class="js-shopping-list-entry" placeholder="e.g., broccoli" required>
+        <label class='startingText' for="shopping-list-entry">What do you need?</label>
+        <input type="text" name="shopping-list-entry" class="js-shopping-list-entry" placeholder="e.g., broccoli"
+          required>
         <button type="submit">Add item</button>
       </form>
-  
-    <div>
-      <input type="checkbox" id="filter-checked" class="filter-checked js-filter-checked" />
-      <label class= 'startingText'vfor="filter-checked">Hide Checked</label>
-    
-    </div>
-    <ul class="shopping-list js-shopping-list">
-    </ul>
+
+      <div>
+        <input type="checkbox" class="js-filter-checked" />
+        <label>Hide Checked</label>
+      </div>
+
+      <ul class="js-shopping-list">
+      </ul>
   </div>
 
 </body>
+
 </html>

@@ -2,8 +2,9 @@
 
 const items = [];
 let error = null;
-let hideCheckeditems = false;
+let hideCheckedItems = false;
 
+//finds targeted item in the server
 const findById = function (id) {
   return this.items.find(currentItem => currentItem.id === id);
 };
@@ -31,7 +32,7 @@ const setError = function (error) {
 export default {
   items,
   error,
-  hideCheckeditems,
+  hideCheckedItems,
   findById,
   addItem,
   findAndUpdate,

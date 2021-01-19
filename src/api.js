@@ -1,6 +1,6 @@
 const BASE_URL = 'https://thinkful-list-api.herokuapp.com/kaythew';
 
-
+//grabs data fr
 const listApiFetch = function (...args) {
   let error;
   return fetch(...args)
@@ -9,6 +9,7 @@ const listApiFetch = function (...args) {
         error = { code: res.status };
         if (!res.headers.get('content-type').includes('json')) {
           error.message = res.statusText;
+          //returns the 
           return Promise.reject(error);
         }
       }

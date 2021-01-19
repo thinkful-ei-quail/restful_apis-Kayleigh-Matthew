@@ -19,16 +19,17 @@ const generateItemElement = function (item) {
     <li class="js-item-element" data-item-id="${item.id}">
       ${itemTitle}
       <div class="shopping-item-controls">
-        <button class="shopping-item-toggle js-item-toggle">
+        <button class=" js-item-toggle">
           <span class="button-label">check</span>
         </button>
-        <button class="shopping-item-delete js-item-delete">
+        <button class=" js-item-delete">
           <span class="button-label">delete</span>
         </button>
       </div>
     </li>`;
 };
 
+//puts each item in a string that can be displayed
 const generateShoppingItemsString = function (shoppingList) {
   const items = shoppingList.map((item) => generateItemElement(item));
   return items.join('');
@@ -70,6 +71,7 @@ const render = function () {
 
   // render the shopping list in the DOM
   const shoppingListItemsString = generateShoppingItemsString(items);
+
 
   // insert that HTML into the DOM
   $('.js-shopping-list').html(shoppingListItemsString);
